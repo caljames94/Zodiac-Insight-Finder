@@ -10,14 +10,14 @@ Easy-to-use Interface: Simple form for entering birth date\
 Instant Results: Quickly displays zodiac sign and horoscope\
 Persistent Data: Remembers user's last entered birth date\
 Responsive Design: Looks great on both desktop and mobile devices\
-Modern UI: Utilizes Bootstrap for a clean, contemporary look\
+Modern UI: Utilizes Bootstrap for a clean, contemporary look
 
 ## :hammer_and_wrench: Technologies Used
 HTML5\
 CSS3\
 JavaScript (ES6+)\
 Bootstrap 5.3 - For responsive design and UI components\
-Local Storage API - For client-side data persistence\
+Local Storage API - For client-side data persistence
 
 ## :camera: Screenshot
 [To be updated with final version]
