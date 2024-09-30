@@ -17,7 +17,7 @@ HTML5\
 CSS3\
 JavaScript (ES6+)\
 Bootstrap 5.3 - For responsive design and UI components\
-Local Storage API - For client-side data persistence 
+Local Storage API - For client-side data persistence\
 
 ## :camera: Screenshot
 [To be updated with final version]
