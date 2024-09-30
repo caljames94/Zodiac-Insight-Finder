@@ -60,6 +60,37 @@ function getZodiacSign(day, month) {
     }
 }
 
+// Get horoscope for a sign
+function getHoroscope(sign) {
+    return horoscopes[sign] || "Horoscope not available.";
+}
+// Display horoscope in modal
+function displayHoroscope(sign, horoscope) {
+    const modalTitle = document.getElementById('horoscopeModalLabel');
+    const modalBody = document.getElementById('horoscopeModalBody');
+    modalTitle.textContent = `Your Zodiac Sign: ${sign}`;
+    modalBody.textContent = horoscope;
+}
+// Modal control functions
+function showModal() {
+    const modal = new bootstrap.Modal(document.getElementById('horoscopeModal'));
+    modal.show();
+}
+function hideModal() {
+    const modal = bootstrap.Modal.getInstance(document.getElementById('horoscopeModal'));
+    if (modal) {
+        modal.hide();
+    }
+}
+// Local storage functions
+function saveToLocalStorage(day, month) {
+    localStorage.setItem('horoscopeBirthday', JSON.stringify({ day, month }));
+}
+function loadFromLocalStorage() {
+    const savedDate = localStorage.getItem('horoscopeBirthday');
+    return savedDate ? JSON.parse(savedDate) : null;
+}
+
 // Initialize app
 function initializeApp() {
     // Set up event listeners
