@@ -31,24 +31,30 @@ const horoscopes = {
 function validateInput(day, month) {
     day = parseInt(day);
     month = parseInt(month);
+    
     if (isNaN(day) || isNaN(month)) {
         return false;
     }
+    
     if (month < 1 || month > 12) {
         return false;
     }
+    
     const daysInMonth = new Date(new Date().getFullYear(), month, 0).getDate();
     if (day < 1 || day > daysInMonth) {
         return false;
     }
+    
     return true;
 }
 // Get zodiac sign based on date
 function getZodiacSign(day, month) {
     const date = new Date(new Date().getFullYear(), month - 1, day);
+    
     for (let sign of zodiacSigns) {
         const start = new Date(date.getFullYear(), sign.startDate.month - 1, sign.startDate.day);
         const end = new Date(date.getFullYear(), sign.endDate.month - 1, sign.endDate.day);
+        
         // Adjust for Capricorn which spans across years
         if (sign.name === 'Capricorn') {
             if (date >= start || date <= end) {
@@ -59,7 +65,6 @@ function getZodiacSign(day, month) {
         }
     }
 }
-
 // Get horoscope for a sign
 function getHoroscope(sign) {
     return horoscopes[sign] || "Horoscope not available.";
@@ -68,19 +73,13 @@ function getHoroscope(sign) {
 function displayHoroscope(sign, horoscope) {
     const modalTitle = document.getElementById('horoscopeModalLabel');
     const modalBody = document.getElementById('horoscopeModalBody');
+    
     modalTitle.textContent = `Your Zodiac Sign: ${sign}`;
     modalBody.textContent = horoscope;
-}
-// Modal control functions
-function showModal() {
-    const modal = new bootstrap.Modal(document.getElementById('horoscopeModal'));
+    // Manually show the modal
+    const modalElement = document.getElementById('horoscopeModal');
+    const modal = new bootstrap.Modal(modalElement);
     modal.show();
-}
-function hideModal() {
-    const modal = bootstrap.Modal.getInstance(document.getElementById('horoscopeModal'));
-    if (modal) {
-        modal.hide();
-    }
 }
 // Local storage functions
 function saveToLocalStorage(day, month) {
@@ -90,12 +89,11 @@ function loadFromLocalStorage() {
     const savedDate = localStorage.getItem('horoscopeBirthday');
     return savedDate ? JSON.parse(savedDate) : null;
 }
-
 // Initialize app
 function initializeApp() {
     // Set up event listeners
-    document.getElementById('submitBtn').addEventListener('click', handleSubmit);
-    document.getElementById('horoscopeModal').addEventListener('hidden.bs.modal', hideModal);
+    document.getElementById('dateForm').addEventListener('submit', handleSubmit);
+    
     // Load saved date from localStorage
     const savedDate = loadFromLocalStorage();
     if (savedDate) {
@@ -104,17 +102,17 @@ function initializeApp() {
     }
 }
 // Handle form submission
-function handleSubmit() {
+function handleSubmit(event) {
+    event.preventDefault();
     const day = document.getElementById('dayInput').value;
     const month = document.getElementById('monthInput').value;
+    
     if (validateInput(day, month)) {
         const sign = getZodiacSign(parseInt(day), parseInt(month));
         const horoscope = getHoroscope(sign);
         displayHoroscope(sign, horoscope);
-        showModal();
         saveToLocalStorage(day, month);
     } else {
-        // Display error message
         alert('Please enter a valid date.');
     }
 }
