@@ -27,6 +27,20 @@ const horoscopes = {
     Aquarius: "Your innovative ideas will shine today. Don't be afraid to share them.",
     Pisces: "Trust your instincts and follow your heart. It knows the way."
 };
+const zodiacImages = {
+    Aries: './assets/images/aries.png',
+    Taurus: './assets/images/taurus.png',
+    Gemini: './assets/images/gemini.png',
+    Cancer: './assets/images/cancer.png',
+    Leo: './assets/images/leo.png',
+    Virgo: './assets/images/virgo.png',
+    Libra: './assets/images/libra.png',
+    Scorpio: './assets/images/scorpio.png',
+    Sagittarius: './assets/images/sagittarius.png',
+    Capricorn: './assets/images/capricorn.png',
+    Aquarius: './assets/images/aquarius.png',
+    Pisces: './assets/images/pisces.png'
+};
 // Validation function
 function validateInput(day, month) {
     day = parseInt(day);
@@ -72,10 +86,13 @@ function getHoroscope(sign) {
 // Display horoscope in modal
 function displayHoroscope(sign, horoscope) {
     const modalTitle = document.getElementById('horoscopeModalLabel');
-    const modalBody = document.getElementById('horoscopeModalBody');
+    const modalBody = document.getElementById('horoscopeText');
+    const zodiacImage = document.getElementById('zodiacImage');
     
     modalTitle.textContent = `Your Zodiac Sign: ${sign}`;
     modalBody.textContent = horoscope;
+    zodiacImage.src = zodiacImages[sign];
+    zodiacImage.alt = `${sign} zodiac sign`;
     // Manually show the modal
     const modalElement = document.getElementById('horoscopeModal');
     const modal = new bootstrap.Modal(modalElement);
