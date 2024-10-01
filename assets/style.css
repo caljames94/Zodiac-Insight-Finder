@@ -1,34 +1,57 @@
 body {
-    background-color: #f8f9fa;
-    font-family: 'Arial', sans-serif;
+    background-color: #1a1a2e;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
+video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    }
+
 .container {
     max-width: 800px;
 }
 header {
-    background-color: #007bff;
     color: white;
     padding: 2rem 0;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 h1 {
     font-weight: bold;
 }
+
+.heading{
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .card {
     border: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #65737e;
+    color: #ffffff;
 }
 .form-control:focus {
     border-color: #007bff;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #5151f0;
+    border-color: #5151f0;
 }
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #2626a0;
+    border-color: #2626a0;
 }
 
 .modal-image {
@@ -38,7 +61,8 @@ h1 {
 
 .modal-content {
     border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #65737e;
+    color: #ffffff;
 }
 .modal-header {
     background-color: #007bff;
@@ -48,7 +72,7 @@ h1 {
     font-weight: bold;
 }
 .btn-close {
-    color: white;
+     color: #5AB2FF;
 }
 @media (max-width: 576px) {
     h1 {
