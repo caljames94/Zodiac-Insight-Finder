@@ -24,8 +24,8 @@ Local Storage API - For client-side data persistence
 
 
 ## :link: Deployed Application
-You can access the live application here: [Zodiac Insight](file:///Users/callumjames/Desktop/Group-Project/index.html)
+You can access the live application here: [Zodiac Insight][(file:///Users/callumjames/Desktop/Group-Project/index.html)](https://caljames94.github.io/Zodiac-Insight-Finder/)
 
 ## :vertical_traffic_light: Getting Started
 To run this project locally, clone the repository:\
-git clone https://github.com/caljames94/group-project-1.git
+git clone https://github.com/caljames94/Zodiac-Insight-Finder.git
