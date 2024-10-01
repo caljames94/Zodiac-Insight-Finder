@@ -20,7 +20,8 @@ Bootstrap 5.3 - For responsive design and UI components\
 Local Storage API - For client-side data persistence
 
 ## :camera: Screenshot
-[To be updated with final version]
+![Screenshot 2024-10-01 at 8 16 08 PM](https://github.com/user-attachments/assets/09a7568e-80c2-4267-a2fc-4a72946aad0a)
+
 
 ## :link: Deployed Application
 You can access the live application here: [Zodiac Insight](file:///Users/callumjames/Desktop/Group-Project/index.html)
