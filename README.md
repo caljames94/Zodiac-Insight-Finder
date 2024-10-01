@@ -6,17 +6,17 @@
 Zodiac Insight is an interactive web application that allows users to discover their zodiac sign and read their daily horoscope. By simply entering their birth date, users can instantly access personalized astrological insights. This project combines modern web technologies with ancient astrological wisdom to create an engaging and informative user experience.
 
 ## :rocket: Features
-* Easy-to-use Interface: Simple form for entering birth date\
-* Instant Results: Quickly displays zodiac sign and horoscope\
-* Persistent Data: Remembers user's last entered birth date\
-* Responsive Design: Looks great on both desktop and mobile devices\
+* Easy-to-use Interface: Simple form for entering birth date
+* Instant Results: Quickly displays zodiac sign and horoscope
+* Persistent Data: Remembers user's last entered birth date
+* Responsive Design: Looks great on both desktop and mobile devices
 * Modern UI: Utilizes Bootstrap for a clean, contemporary look
 
 ## :hammer_and_wrench: Technologies Used
-* HTML5\
-* CSS3\
-* JavaScript (ES6+)\
-* Bootstrap 5.3 - For responsive design and UI components\
+* HTML5
+* CSS3
+* JavaScript (ES6+)
+* Bootstrap 5.3 - For responsive design and UI components
 * Local Storage API - For client-side data persistence
 
 ## :camera: Screenshot
