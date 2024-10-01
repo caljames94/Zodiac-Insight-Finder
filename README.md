@@ -24,7 +24,7 @@ Zodiac Insight is an interactive web application that allows users to discover t
 
 
 ## :link: Deployed Application
-You can access the live application here: [Zodiac Insight][(file:///Users/callumjames/Desktop/Group-Project/index.html)](https://caljames94.github.io/Zodiac-Insight-Finder/)
+You can access the live application here: [Zodiac Insight][(https://caljames94.github.io/Zodiac-Insight-Finder/)
 
 ## :vertical_traffic_light: Getting Started
 To run this project locally, clone the repository:\
